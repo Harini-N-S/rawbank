@@ -128,11 +128,11 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 }}
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <span style={{ color: isActive ? 'var(--color-gold)' : 'var(--text-muted)' }}>
+                  <span style={{ color: isActive ? 'var(--rawbank-yellow)' : 'var(--text-muted)' }}>
                     {item.icon}
                   </span>
                   <div>
-                    <div style={{ fontWeight: isActive ? 600 : 500, fontSize: '13px' }}>
+                    <div style={{ fontWeight: isActive ? 600 : 500, fontSize: '13px', color: isActive ? 'var(--rawbank-yellow)' : 'var(--text-primary)' }}>
                       {item.label}
                     </div>
                     <div style={{ fontSize: '10px', color: 'var(--text-muted)' }}>
@@ -158,19 +158,19 @@ export const Sidebar: React.FC<SidebarProps> = ({
       {/* Footer Info / Protocol */}
       <div
         style={{
-          padding: '16px',
+          padding: '14px 16px',
           borderTop: '1px solid var(--border-subtle)',
           backgroundColor: 'var(--bg-base)',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '6px' }}>
-          <Network size={14} color="var(--color-gold)" />
-          <span style={{ fontSize: '11px', fontWeight: 600, color: 'var(--text-primary)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '4px' }}>
+          <Network size={14} color="var(--rawbank-yellow)" />
+          <span style={{ fontSize: '10.5px', fontWeight: 700, color: 'var(--text-primary)', letterSpacing: '0.04em' }}>
             SURVEILLANCE PROTOCOL
           </span>
         </div>
-        <div style={{ fontSize: '11px', color: 'var(--text-muted)', lineHeight: '1.4' }}>
-          Rule Engine v1.0 • 11 Forensic Rules Active • Grounded Verification
+        <div style={{ fontSize: '10px', color: 'var(--text-muted)', lineHeight: '1.4' }}>
+          Banque Centrale du Congo (BCC) AML Standards • 11 Forensic Rules Active
         </div>
       </div>
     </aside>

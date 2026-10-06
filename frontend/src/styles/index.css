@@ -1,69 +1,128 @@
 /* ==============================================================================
  * Rawbank Sentient Fraud Intelligence Platform
- * Phase 7 & 8 Enterprise Dark Mode Design System
- * Congolese Leopard Identity (Obsidian #0B0E14 & Warm Amber #F5A623)
+ * Phase A Enterprise Design System — Official Rawbank Visual Language
+ * Congolese Leopard Identity: Selective Yellow (#FCB900) & Obsidian (#0E131B)
  * ============================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap');
 
 :root {
-  /* Surfaces */
-  --bg-base: #0B0E14;
-  --bg-panel: #121721;
-  --bg-elevated: #1A2232;
-  --bg-card: #151C2A;
-  --bg-hover: #1E273A;
-  --bg-active: #243046;
+  /* ==========================================================================
+   * 1. RAWBANK BRAND CORE TOKENS (Official 2025 Identity Reference)
+   * ========================================================================== */
+  --rawbank-yellow: #FCB900;                 /* Selective Yellow - primary brand color */
+  --rawbank-yellow-hover: #E5A700;           /* Interactive button hover */
+  --rawbank-yellow-light: #FFD24D;           /* Bright accent highlight */
+  --rawbank-yellow-fill: rgba(252, 185, 0, 0.12); /* Subtle brand tint */
+  --rawbank-yellow-border: rgba(252, 185, 0, 0.35); /* Focus outline & active pill */
+  --rawbank-yellow-glow: 0 0 16px rgba(252, 185, 0, 0.22); /* Focus / active glow */
 
-  /* Borders & Dividers */
-  --border-subtle: #222C3F;
-  --border-default: #2A364E;
-  --border-strong: #3D4D6D;
-  --border-focus: #F5A623;
+  /* ==========================================================================
+   * 2. OBSIDIAN & SLATE SURFACES (Low Fatigue Enterprise Console)
+   * ========================================================================== */
+  --rawbank-black: #0E131B;                  /* Viewport canvas base */
+  --rawbank-surface: #141B26;                /* Panel, sidebar, navigation background */
+  --rawbank-surface-card: #192231;           /* Elevated cards & dense table rows */
+  --rawbank-surface-elevated: #202B3C;       /* Modals, flyouts & drawer popovers */
+  --rawbank-surface-hover: #263346;          /* Table row & interactive hover */
+  --rawbank-surface-active: #2C3C52;         /* Selected row / active node */
 
-  /* Brand Accents - Rawbank Warm Amber / Gold */
-  --color-gold: #F5A623;
-  --color-gold-bright: #FFB733;
-  --color-gold-fill: rgba(245, 166, 35, 0.12);
-  --color-gold-border: rgba(245, 166, 35, 0.35);
+  /* ==========================================================================
+   * 3. ARCHITECTURAL BORDERS & SEPARATORS
+   * ========================================================================== */
+  --rawbank-border: #233044;                 /* Subtle hairline separator */
+  --rawbank-border-default: #2C3D56;         /* Default container border */
+  --rawbank-border-strong: #3D5375;          /* Interactive input & active border */
+  --rawbank-border-gold: rgba(252, 185, 0, 0.45); /* Brand accent border */
 
-  /* Typography */
-  --text-primary: #F8FAFC;
-  --text-secondary: #94A3B8;
-  --text-muted: #64748B;
-  --text-inverse: #0B0E14;
-  --text-mono: #38BDF8;
+  /* ==========================================================================
+   * 4. TYPOGRAPHY TOKENS
+   * ========================================================================== */
+  --rawbank-text-primary: #F8FAFC;           /* Slate 50 - maximum readability */
+  --rawbank-text-secondary: #94A3B8;         /* Slate 400 - labels, subtitles */
+  --rawbank-text-muted: #64748B;             /* Slate 500 - hints, timestamps */
+  --rawbank-text-inverse: #0E131B;           /* Dark text on yellow badges/buttons */
+  --rawbank-text-mono: #38BDF8;              /* Monospace entity IDs & hashes */
 
-  /* Semantic Alert Levels */
-  --sev-critical-text: #EF4444;
-  --sev-critical-bg: rgba(239, 68, 68, 0.14);
-  --sev-critical-border: rgba(239, 68, 68, 0.4);
+  /* ==========================================================================
+   * 5. SEMANTIC RISK & STATUS TOKENS (Preserving Operational Meaning)
+   * ========================================================================== */
+  --rawbank-danger: #EF4444;                 /* Critical Risk (Tier 1 Fraud Alert) */
+  --rawbank-danger-bg: rgba(239, 68, 68, 0.14);
+  --rawbank-danger-border: rgba(239, 68, 68, 0.45);
 
-  --sev-high-text: #F97316;
-  --sev-high-bg: rgba(249, 115, 22, 0.14);
-  --sev-high-border: rgba(249, 115, 22, 0.4);
+  --rawbank-high: #F97316;                   /* High Risk / Escalation Required */
+  --rawbank-high-bg: rgba(249, 115, 22, 0.14);
+  --rawbank-high-border: rgba(249, 115, 22, 0.45);
 
-  --sev-medium-text: #F59E0B;
-  --sev-medium-bg: rgba(245, 158, 11, 0.14);
-  --sev-medium-border: rgba(245, 158, 11, 0.4);
+  --rawbank-warning: #F59E0B;                /* Medium Risk / Anomaly Detected */
+  --rawbank-warning-bg: rgba(245, 158, 11, 0.14);
+  --rawbank-warning-border: rgba(245, 158, 11, 0.45);
 
-  --sev-low-text: #38BDF8;
-  --sev-low-bg: rgba(56, 189, 248, 0.14);
-  --sev-low-border: rgba(56, 189, 248, 0.4);
+  --rawbank-low: #38BDF8;                    /* Low Risk / Operational */
+  --rawbank-low-bg: rgba(56, 189, 248, 0.14);
+  --rawbank-low-border: rgba(56, 189, 248, 0.45);
 
-  --sev-safe-text: #10B981;
-  --sev-safe-bg: rgba(16, 185, 129, 0.14);
-  --sev-safe-border: rgba(16, 185, 129, 0.4);
+  --rawbank-success: #10B981;                /* Verified Safe / Live Environment */
+  --rawbank-success-bg: rgba(16, 185, 129, 0.14);
+  --rawbank-success-border: rgba(16, 185, 129, 0.45);
 
-  /* Metrics & Shadows */
+  /* ==========================================================================
+   * 6. SYSTEM ALIASES (Full Compatibility with Existing Components)
+   * ========================================================================== */
+  --bg-base: var(--rawbank-black);
+  --bg-panel: var(--rawbank-surface);
+  --bg-card: var(--rawbank-surface-card);
+  --bg-elevated: var(--rawbank-surface-elevated);
+  --bg-hover: var(--rawbank-surface-hover);
+  --bg-active: var(--rawbank-surface-active);
+
+  --border-subtle: var(--rawbank-border);
+  --border-default: var(--rawbank-border-default);
+  --border-strong: var(--rawbank-border-strong);
+  --border-focus: var(--rawbank-yellow);
+
+  --color-gold: var(--rawbank-yellow);
+  --color-gold-bright: var(--rawbank-yellow-light);
+  --color-gold-fill: var(--rawbank-yellow-fill);
+  --color-gold-border: var(--rawbank-yellow-border);
+
+  --text-primary: var(--rawbank-text-primary);
+  --text-secondary: var(--rawbank-text-secondary);
+  --text-muted: var(--rawbank-text-muted);
+  --text-inverse: var(--rawbank-text-inverse);
+  --text-mono: var(--rawbank-text-mono);
+
+  --sev-critical-text: var(--rawbank-danger);
+  --sev-critical-bg: var(--rawbank-danger-bg);
+  --sev-critical-border: var(--rawbank-danger-border);
+
+  --sev-high-text: var(--rawbank-high);
+  --sev-high-bg: var(--rawbank-high-bg);
+  --sev-high-border: var(--rawbank-high-border);
+
+  --sev-medium-text: var(--rawbank-warning);
+  --sev-medium-bg: var(--rawbank-warning-bg);
+  --sev-medium-border: var(--rawbank-warning-border);
+
+  --sev-low-text: var(--rawbank-low);
+  --sev-low-bg: var(--rawbank-low-bg);
+  --sev-low-border: var(--rawbank-low-border);
+
+  --sev-safe-text: var(--rawbank-success);
+  --sev-safe-bg: var(--rawbank-success-bg);
+  --sev-safe-border: var(--rawbank-success-border);
+
+  /* Metrics & Elevation */
+  --radius-xs: 2px;
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-full: 9999px;
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -4px rgba(0, 0, 0, 0.6);
-  --shadow-glow: 0 0 15px rgba(245, 166, 35, 0.2);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.7), 0 4px 6px -4px rgba(0, 0, 0, 0.7);
+  --shadow-glow: var(--rawbank-yellow-glow);
 }
 
 /* Base Reset */

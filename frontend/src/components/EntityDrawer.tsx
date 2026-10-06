@@ -171,7 +171,7 @@ export const EntityDrawer: React.FC<EntityDrawerProps> = ({
     if (t.includes('alert')) return <ShieldAlert className="w-5 h-5 text-accent-red" />;
     if (t.includes('transaction')) return <CreditCard className="w-5 h-5 text-accent-cyan" />;
     if (t.includes('customer')) return <User className="w-5 h-5 text-accent-blue" />;
-    if (t.includes('device')) return <Smartphone className="w-5 h-5 text-accent-purple" />;
+    if (t.includes('device')) return <Smartphone className="w-5 h-5 text-accent-orange" />;
     if (t.includes('beneficiary')) return <Building className="w-5 h-5 text-accent-gold" />;
     return <Layers className="w-5 h-5 text-text-muted" />;
   };
@@ -447,7 +447,7 @@ export const EntityDrawer: React.FC<EntityDrawerProps> = ({
                         <span className="text-text-muted block">Initiating Device</span>
                         <button
                           onClick={() => onSelectEntity?.('device', transactionData.device_id)}
-                          className="font-mono text-accent-purple hover:underline flex items-center gap-1 mt-0.5"
+                          className="font-mono text-accent-orange hover:underline flex items-center gap-1 mt-0.5"
                         >
                           {transactionData.device_id}
                           <ExternalLink className="w-3 h-3" />

@@ -191,7 +191,7 @@ export const CopilotPage: React.FC<CopilotPageProps> = ({
               <Sparkles className="w-5 h-5 text-accent-gold" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold tracking-tight text-text-primary">
+              <h1 className="text-2xl font-bold tracking-tight text-text-primary" style={{ fontFamily: "'Montserrat', 'Inter', sans-serif" }}>
                 Sentient Fraud Investigation Copilot
               </h1>
               <div className="flex items-center gap-2 mt-0.5">

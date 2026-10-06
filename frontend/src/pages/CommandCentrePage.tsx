@@ -80,15 +80,18 @@ export const CommandCentrePage: React.FC<CommandCentrePageProps> = ({
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-border-light">
         <div>
           <div className="flex items-center gap-3">
-            <h1 className="text-2xl font-bold tracking-tight text-text-primary">
+            <h1 className="text-2xl font-bold tracking-tight text-text-primary" style={{ fontFamily: "'Montserrat', 'Inter', sans-serif" }}>
               Sentient Command Centre
             </h1>
             <span className="badge badge-safe font-mono text-[10px]">
               Live Synthetic Environment
             </span>
+            <span className="badge badge-gold font-mono text-[10px] hidden sm:inline-flex">
+              BCC Compliance Active
+            </span>
           </div>
           <p className="text-xs text-text-muted mt-1">
-            Real-time fraud surveillance, high-risk triage, and synthetic telemetry across Rawbank DRC operations.
+            Real-time fraud surveillance, high-risk triage, and synthetic telemetry across Rawbank DRC operations (Kinshasa & Lubumbashi hubs).
           </p>
         </div>
 

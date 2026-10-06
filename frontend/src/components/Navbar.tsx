@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Shield, Search, Terminal, Activity, Clock } from 'lucide-react';
 
+import { RawbankLogo } from './RawbankLogo';
+
 interface NavbarProps {
   onOpenSearch: () => void;
   activeView?: string;
@@ -56,51 +58,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, activeView = 'comm
         zIndex: 50,
       }}
     >
-      {/* Brand & Emblem */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-        <div
-          style={{
-            width: '32px',
-            height: '32px',
-            borderRadius: 'var(--radius-sm)',
-            backgroundColor: 'var(--color-gold)',
-            color: 'var(--text-inverse)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontWeight: 700,
-            fontSize: '16px',
-            boxShadow: 'var(--shadow-glow)',
-          }}
-        >
-          <Shield size={20} strokeWidth={2.5} />
-        </div>
-        <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <span style={{ fontWeight: 700, fontSize: '14px', letterSpacing: '0.04em', color: 'var(--text-primary)' }}>
-              RAWBANK
-            </span>
-            <span
-              style={{
-                color: 'var(--color-gold)',
-                fontWeight: 600,
-                fontSize: '12px',
-                padding: '1px 6px',
-                background: 'var(--color-gold-fill)',
-                borderRadius: 'var(--radius-sm)',
-                border: '1px solid var(--color-gold-border)',
-              }}
-            >
-              SENTIENT
-            </span>
-          </div>
-          <div style={{ fontSize: '10px', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-            Fraud Intelligence Platform • aXtrLabs
-          </div>
-        </div>
-      </div>
+      {/* Official Rawbank Brand Lockup with Congolese Leopard Emblem */}
+      <RawbankLogo size="md" showSubtitle={true} showBadge={true} />
 
-      {/* Synthetic Environment Notice Pill */}
+      {/* Prominent Synthetic Environment Disclaimer Boundary */}
       <div
         style={{
           display: 'flex',
@@ -108,9 +69,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, activeView = 'comm
           gap: '8px',
           padding: '4px 12px',
           backgroundColor: 'rgba(16, 185, 129, 0.08)',
-          border: '1px solid rgba(16, 185, 129, 0.25)',
+          border: '1px solid rgba(16, 185, 129, 0.28)',
           borderRadius: 'var(--radius-full)',
         }}
+        title="Analytical safety boundary: 100% synthetic research dataset, zero actual customer records"
       >
         <span
           style={{
@@ -121,10 +83,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, activeView = 'comm
             boxShadow: '0 0 6px var(--sev-safe-text)',
           }}
         />
-        <span style={{ fontSize: '11px', fontWeight: 600, color: 'var(--sev-safe-text)', letterSpacing: '0.03em' }}>
-          SYNTHETIC BANKING ENVIRONMENT
+        <span style={{ fontSize: '11px', fontWeight: 600, color: 'var(--sev-safe-text)', letterSpacing: '0.02em' }}>
+          Synthetic banking environment — No real customer data
         </span>
-        <span style={{ fontSize: '10px', color: 'var(--text-muted)' }}>| Zero Real PII</span>
       </div>
 
       {/* Right Controls: Search, Clocks, Status */}
